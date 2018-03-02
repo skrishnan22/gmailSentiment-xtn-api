@@ -11,12 +11,10 @@ def getSentiment():
     arrSubs = request.json
     arrSentiment = []
     for sub in arrSubs:
-        print(sub)
         text = TextBlob(sub)
-        arrSentiment.append(round(text.sentiment[0],2))
-    print(arrSentiment);    
+        arrSentiment.append(round(text.sentiment[0],2))  
     return jsonify({"status":'success',"sentiment":arrSentiment})
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=False)
