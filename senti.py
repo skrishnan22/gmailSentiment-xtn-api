@@ -8,7 +8,7 @@ CORS(app)
 
 @app.route('/getSentiment',methods = ['GET','POST'])
 def getSentiment():
-    arrSubs = request.json
+    arrSubs = request.json123
     arrSentiment = []
     for sub in arrSubs:
         text = TextBlob(sub)
